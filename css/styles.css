@@ -48,8 +48,6 @@ address {
 }
 
 .header-container {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
 
@@ -124,7 +122,29 @@ a {
 }
 
 .header-contacts-link-mail {
+  display: inline-flex;
   margin-right: 40px;
+}
+
+.header-contacts-link-mail::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/header-mail.svg);
+}
+
+.header-contacts-link-tel {
+  display: inline-flex;
+}
+
+.header-contacts-link-tel::before {
+  content: "";
+  width: 10px;
+  height: 16px;
+  align-items: center;
+  margin-right: 10px;
+  background-image: url(../images/header-tel.svg);
 }
 
 .header-contacts-link-mail,
@@ -146,10 +166,23 @@ a {
 }
 
 .main-section {
-  background: #2f303a;
   display: block;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main-section-image.jpeg);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-section-description {
@@ -236,6 +269,34 @@ a {
 
 .about-us-container:not(:last-child) {
   margin-right: 30px;
+}
+
+.about-us-container::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icon-antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icon-clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icon-diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/icon-astronaut.svg);
 }
 
 .what-we-do-section {
