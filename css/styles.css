@@ -118,38 +118,39 @@ a {
 }
 
 .header-contacts {
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
 }
 
 .header-contacts-link-mail {
+  margin-right: 30px;
   display: inline-flex;
-  margin-right: 40px;
-}
-
-.header-contacts-link-mail::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/header-mail.svg);
+  align-items: center;
 }
 
 .header-contacts-link-tel {
   display: inline-flex;
-}
-
-.header-contacts-link-tel::before {
-  content: "";
-  width: 10px;
-  height: 16px;
   align-items: center;
-  margin-right: 10px;
-  background-image: url(../images/header-tel.svg);
 }
 
 .header-contacts-link-mail,
 .header-contacts-link-tel {
   color: var(--gray);
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .hero {
@@ -276,27 +277,20 @@ a {
   content: "";
   height: 120px;
   margin-bottom: 30px;
-  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/icon-antenna.svg);
+.icon-antenna {
+  width: 70px;
+  height: 70px;
 }
 
-.icon-clock::before {
-  background-image: url(../images/icon-clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/icon-diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icon-astronaut.svg);
+.icon-clock,
+.icon-astronaut,
+.icon-diagram {
 }
 
 .what-we-do-section {
