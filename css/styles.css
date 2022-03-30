@@ -118,19 +118,19 @@ a {
 }
 
 .header-contacts {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   margin-left: auto;
 }
 
 .header-contacts-link-mail {
   margin-right: 30px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
 .header-contacts-link-tel {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
@@ -139,16 +139,8 @@ a {
   color: var(--gray);
 }
 
-.icon-mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
+.icon-mail,
 .icon-tel {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -272,25 +264,15 @@ a {
   margin-right: 30px;
 }
 
-.about-us-container::before {
-  display: block;
-  content: "";
+.about-us-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
   border-radius: 4px;
-}
-
-.icon-antenna {
-  width: 70px;
-  height: 70px;
-}
-
-.icon-clock,
-.icon-astronaut,
-.icon-diagram {
 }
 
 .what-we-do-section {
@@ -334,6 +316,7 @@ a {
 }
 
 .team-member-card {
+  width: 270px;
   background: #ffffff;
   /* material shadow v1 */
 
@@ -386,7 +369,92 @@ a {
   letter-spacing: 0.03em;
 
   color: #757575;
+  margin-bottom: 16px;
+}
+
+.team-member-social {
   padding-bottom: 30px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  background-color: #fff;
+}
+
+.icon-insta,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+  fill: currentColor;
+}
+
+.social-link-bg:hover,
+.social-link-bg:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+.clients-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  padding-bottom: 50px;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+  border-radius: 4px;
+}
+
+.icon-client {
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .footer-section {
@@ -409,8 +477,13 @@ a {
 }
 
 .footer-info {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-main-info {
+  margin-right: 70px;
 }
 
 .footer-address {
@@ -449,6 +522,48 @@ a {
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
   color: var(--accent-color);
+}
+
+.footer-social {
+  padding-top: 12px;
+}
+
+.footer-social-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link-bg:hover,
+.footer-social-link-bg:focus {
+  background-color: var(--accent-color);
 }
 
 .project-name {
@@ -629,6 +744,13 @@ a {
   margin-top: 30px;
 
   flex-basis: calc((100% - 90px) / 3);
+}
+
+.project:hover,
+.project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .project-description {
